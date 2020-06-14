@@ -1,0 +1,36 @@
+{
+  "name": "create-conical-gradient",
+  "version": "0.0.1",
+  "description": "A pretty extension for HTML Canvas API to create a pattern of the conical gradient.",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --open",
+    "build": "webpack --mode=production",
+    "prepublishOnly": "npm run build && npm run changelog",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+  },
+  "keywords": [
+    "conical-gradient",
+    "canvas",
+    "api",
+    "extension"
+  ],
+  "author": "parksben",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/plugin-proposal-optional-chaining": "^7.10.1",
+    "@babel/plugin-transform-arrow-functions": "^7.10.1",
+    "@babel/polyfill": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "babel-loader": "^8.1.0",
+    "conventional-changelog-cli": "^2.0.34",
+    "core-js": "^3.6.5",
+    "rimraf": "^3.0.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
