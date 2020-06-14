@@ -27,7 +27,7 @@ export default function createConicalGradient(
   );
 
   ctx.translate(x, y);
-  ctx.lineWidth = (2 * Math.PI * (radius + 20)) / 360;
+  const lineWidth = (2 * Math.PI * (radius + 20)) / 360;
 
   // color linear interpolate
   const interpolate = new ColorInterpolate(colorStops, degEnd - degStart + 1);
@@ -40,7 +40,7 @@ export default function createConicalGradient(
     ctx.beginPath();
 
     ctx.moveTo(0, 0);
-    ctx.lineTo(radius, -2 * ctx.lineWidth);
+    ctx.lineTo(radius, -2 * lineWidth);
     ctx.lineTo(radius, 0);
 
     ctx.fillStyle = interpolate.getColor(i - degStart);
