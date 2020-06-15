@@ -2,15 +2,15 @@ import ColorInterpolate from './ColorInterpolate';
 
 export default function createConicalGradient(
   userContext,
+  colorStops = [
+    [0, '#fff'],
+    [1, '#fff'],
+  ],
   x,
   y,
   startAngle = 0,
   endAngle = 2 * Math.PI,
   anticlockwise = false,
-  colorStops = [
-    [0, '#fff'],
-    [1, '#fff'],
-  ],
 ) {
   const degStart = Math.floor((startAngle * 180) / Math.PI);
   const degEnd = Math.ceil((endAngle * 180) / Math.PI);
@@ -65,3 +65,21 @@ export default function createConicalGradient(
 
   return userContext.createPattern(cvsForClip, 'no-repeat');
 }
+
+CanvasRenderingContext2D.prototype.createConicalGradient = function() {
+  const args = arguments;
+  const ctx2d = this;
+
+  const obj = {
+    stops: [],
+    pattern: null,
+    addColorStop(offset, color) {
+      this.stops.push([offset, color]);
+    },
+    get pattern() {
+      return createConicalGradient(ctx2d, this.stops, ...args);
+    },
+  };
+
+  return obj;
+};

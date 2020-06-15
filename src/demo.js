@@ -1,13 +1,16 @@
-import createConicalGradient from './index';
+import './index';
 
 const canvas = document.getElementById('demo-canvas');
 const ctx = canvas.getContext('2d');
 
-ctx.fillStyle = createConicalGradient(ctx, 240, 135, 0, Math.PI * 2, false, [
-  [0, '#f00'],
-  [0.8, '#0f0'],
-  [0.3, '#00f'],
-  [0.5, '#0ff'],
-  [1, '#f00'],
-]);
+const gradient = ctx.createConicalGradient(240, 135, -Math.PI, Math.PI, false);
+
+gradient.addColorStop(0, '#f00');
+gradient.addColorStop(0.2, '#00f');
+gradient.addColorStop(0.4, '#0ff');
+gradient.addColorStop(0.6, '#f0f');
+gradient.addColorStop(0.8, '#ff0');
+gradient.addColorStop(1, '#f00');
+
+ctx.fillStyle = gradient.pattern;
 ctx.fillRect(0, 0, canvas.clientWidth, canvas.height);
