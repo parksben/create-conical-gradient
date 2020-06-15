@@ -16,6 +16,6 @@ export default class ColorInterpolate {
 
   getColor(offset) {
     const imgData = this.ctx.getImageData(offset, 0, 1, 1);
-    return `rgba(${imgData.data.slice(0, 4).join(',')})`;
+    return `rgba(${imgData.data.slice(0, 3).join(',')}, ${imgData.data[3] / 255})`;
   }
 }

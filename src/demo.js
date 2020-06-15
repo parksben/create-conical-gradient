@@ -7,6 +7,7 @@ ctx.fillStyle = createConicalGradient(ctx, 240, 135, 0, Math.PI * 2, false, [
   [0, '#f00'],
   [0.8, '#0f0'],
   [0.3, '#00f'],
-  [1, '#0ff'],
+  [0.5, '#0ff'],
+  [1, '#f00'],
 ]);
 ctx.fillRect(0, 0, canvas.clientWidth, canvas.height);
