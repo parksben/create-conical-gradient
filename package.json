@@ -38,5 +38,9 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/parksben/create-conical-gradient.git"
   }
 }
