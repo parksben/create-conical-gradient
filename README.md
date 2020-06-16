@@ -6,6 +6,14 @@
 
 A pretty extension for [CanvasRenderingContext2D](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D) to create a pattern of the conical gradient.
 
+## Demo
+
+![demo](https://raw.githubusercontent.com/parksben/create-conical-gradient/master/demo/house.png)
+
+<a href="https://codesandbox.io/s/create-colorful-house-1o5op?file=/src/App.js" target="_blank">
+  <img src="https://codesandbox.io/static/img/play-codesandbox.svg" alt="Edit markdown-navbar-demo-online">
+</a>
+
 ## 🍿 Install
 
 Install the **npm** package for development:
@@ -17,7 +25,7 @@ yarn add create-conical-gradient # OR `npm i --save create-conical-gradient`
 Of course, you can also use the **umd** resources for production:
 
 ```html
-<script src="//unpkg.com/create-conical-gradient@<VERSION>/umd/create-conical-gradient.min.js"></script>
+<script src="//unpkg.com/create-conical-gradient@latest/umd/create-conical-gradient.min.js"></script>
 ```
 
 ## 🌭 Quickstart
@@ -51,4 +59,8 @@ ctx.fillRect(0, 0, canvas.clientWidth, canvas.height);
 
 Output:
 
-![quickstart](./demo/output.png)
+![quickstart](https://raw.githubusercontent.com/parksben/create-conical-gradient/master/demo/output.png)
+
+<a href="https://codesandbox.io/s/create-conical-gradient-ozw8o?file=/src/App.js" target="_blank">
+  <img src="https://codesandbox.io/static/img/play-codesandbox.svg" alt="Edit markdown-navbar-demo-online">
+</a>

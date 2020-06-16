@@ -13,4 +13,4 @@ gradient.addColorStop(0.8, '#ff0');
 gradient.addColorStop(1, '#f00');
 
 ctx.fillStyle = gradient.pattern;
-ctx.fillRect(0, 0, canvas.clientWidth, canvas.height);
+ctx.fillRect(0, 0, canvas.width, canvas.height);
