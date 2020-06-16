@@ -1,6 +1,6 @@
 {
   "name": "create-conical-gradient",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "A pretty extension for CanvasRenderingContext2D to create a pattern of the conical gradient.",
   "main": "dist/index.js",
   "unpkg": "umd/create-conical-gradient.min.js",
