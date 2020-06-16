@@ -1,22 +1,24 @@
 {
   "name": "create-conical-gradient",
   "version": "0.0.1",
-  "description": "A pretty extension for HTML Canvas API to create a pattern of the conical gradient.",
+  "description": "A pretty extension for CanvasRenderingContext2D to create a pattern of the conical gradient.",
   "main": "dist/index.js",
   "unpkg": "umd/create-conical-gradient.min.js",
   "scripts": {
     "dev": "webpack-dev-server --open --config ./config/webpack.config.base.js",
+    "build": "npm run build:cjs && npm run build:umd && npm run build:demo",
     "build:cjs": "webpack --config ./config/webpack.config.cjs.js",
     "build:umd": "webpack --config ./config/webpack.config.umd.js",
     "build:demo": "webpack --config ./config/webpack.config.base.js",
-    "build": "npm run build:cjs && npm run build:umd && npm run build:demo",
     "prepublishOnly": "npm run build && npm run changelog",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "keywords": [
-    "conical-gradient",
+    "createConicalGradient",
+    "conical",
+    "gradient",
     "canvas",
-    "api",
+    "CanvasRenderingContext2D",
     "extension"
   ],
   "author": "parksben",
