@@ -6,8 +6,8 @@ export default function createConicalGradient(
     [0, '#fff'],
     [1, '#fff'],
   ],
-  x,
-  y,
+  x = 0,
+  y = 0,
   startAngle = 0,
   endAngle = 2 * Math.PI,
   anticlockwise = false,
@@ -21,10 +21,18 @@ export default function createConicalGradient(
   canvas.height = userContext.canvas.height;
   const ctx = canvas.getContext('2d');
 
+  // user canvas corners
+  const corners = [
+    [0, 0],
+    [userContext.canvas.width, 0],
+    [userContext.canvas.width, userContext.canvas.height],
+    [0, userContext.canvas.height],
+  ];
+
   // gradient radius
-  const radius = Math.ceil(
-    Math.sqrt(Math.pow(userContext.canvas.width, 2) + Math.pow(userContext.canvas.height, 2)),
-  );
+  const radius =
+    Math.max(...corners.map(([cx, cy]) => Math.sqrt(Math.pow(cx - x, 2) + Math.pow(cy - y, 2)))) +
+    10;
 
   ctx.translate(x, y);
   const lineWidth = (2 * Math.PI * (radius + 20)) / 360;
