@@ -3,7 +3,7 @@ import './index';
 const canvas = document.getElementById('demo-canvas');
 const ctx = canvas.getContext('2d');
 
-const gradient = ctx.createConicalGradient(240, 135, -Math.PI, Math.PI, false);
+const gradient = ctx.createConicalGradient(240, 135, -Math.PI, Math.PI);
 
 gradient.addColorStop(0, '#f00');
 gradient.addColorStop(0.2, '#00f');

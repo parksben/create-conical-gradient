@@ -2,17 +2,16 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    'dist/index': './src/index.js',
-    'demo/bundle': './src/demo.js',
+    bundle: path.resolve(__dirname, '../src/demo.js'),
   },
   output: {
-    path: path.resolve(__dirname, './'),
+    path: path.resolve(__dirname, '../demo'),
     filename: '[name].js',
   },
   module: {
     rules: [
       {
-        test: /\.js[x]?$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -21,7 +20,7 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: path.resolve(__dirname, './demo'),
+    contentBase: path.resolve(__dirname, '../demo'),
     compress: true,
     port: 4000,
     hot: true,
