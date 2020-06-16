@@ -6,9 +6,9 @@
 
 A pretty extension for [CanvasRenderingContext2D](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D) to create a pattern of the conical gradient.
 
-## Demo
+## 🍭 Demo Online
 
-![demo](https://raw.githubusercontent.com/parksben/create-conical-gradient/master/demo/house.png)
+![demo](https://raw.githubusercontent.com/parksben/create-conical-gradient/master/demo/demo-online.jpg)
 
 <a href="https://codesandbox.io/s/create-colorful-house-1o5op?file=/src/App.js" target="_blank">
   <img src="https://codesandbox.io/static/img/play-codesandbox.svg" alt="Edit markdown-navbar-demo-online">
