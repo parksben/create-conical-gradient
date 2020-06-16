@@ -8,7 +8,9 @@ A pretty extension for [CanvasRenderingContext2D](https://developer.mozilla.org/
 
 ## 🍭 Demo Online
 
-![demo](https://raw.githubusercontent.com/parksben/create-conical-gradient/master/demo/demo-online.jpg)
+<a href="https://codesandbox.io/s/create-colorful-house-1o5op?file=/src/App.js" target="_blank">
+  <img src="https://raw.githubusercontent.com/parksben/create-conical-gradient/master/demo/demo-online.jpg" alt="demo-online">
+</a>
 
 <a href="https://codesandbox.io/s/create-colorful-house-1o5op?file=/src/App.js" target="_blank">
   <img src="https://codesandbox.io/static/img/play-codesandbox.svg" alt="Edit markdown-navbar-demo-online">
@@ -25,7 +27,7 @@ yarn add create-conical-gradient # OR `npm i --save create-conical-gradient`
 Of course, you can also use the **umd** resources for production:
 
 ```html
-<script src="//unpkg.com/create-conical-gradient@latest/umd/create-conical-gradient.min.js"></script>
+<script src="https://unpkg.com/create-conical-gradient@latest/umd/create-conical-gradient.min.js"></script>
 ```
 
 ## 🌭 Quickstart
