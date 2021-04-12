@@ -1,11 +1,12 @@
 import ColorInterpolate from './ColorInterpolate';
+import { ConicalGradient } from './types';
 
 export default function createConicalGradient(
-  userContext,
+  userContext: CanvasRenderingContext2D,
   colorStops = [
     [0, '#fff'],
     [1, '#fff'],
-  ],
+  ] as [number, string][],
   x = 0,
   y = 0,
   startAngle = 0,
@@ -19,7 +20,7 @@ export default function createConicalGradient(
   const canvas = document.createElement('canvas');
   canvas.width = userContext.canvas.width;
   canvas.height = userContext.canvas.height;
-  const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext('2d')!;
 
   // user canvas corners
   const corners = [
@@ -63,24 +64,22 @@ export default function createConicalGradient(
   const cvsForClip = document.createElement('canvas');
   cvsForClip.width = userContext.canvas.width;
   cvsForClip.height = userContext.canvas.height;
-  const clipCtx = cvsForClip.getContext('2d');
+  const clipCtx = cvsForClip.getContext('2d')!;
   clipCtx.beginPath();
   clipCtx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
   clipCtx.lineTo(x, y);
   clipCtx.closePath();
-  clipCtx.fillStyle = clipCtx.createPattern(canvas, 'no-repeat');
+  clipCtx.fillStyle = clipCtx.createPattern(canvas, 'no-repeat')!;
   clipCtx.fill();
 
-  return userContext.createPattern(cvsForClip, 'no-repeat');
+  return userContext.createPattern(cvsForClip, 'no-repeat')!;
 }
 
-CanvasRenderingContext2D.prototype.createConicalGradient = function() {
-  const args = arguments;
+CanvasRenderingContext2D.prototype.createConicalGradient = function (...args) {
   const ctx2d = this;
 
-  const obj = {
+  const obj: ConicalGradient = {
     stops: [],
-    pattern: null,
     addColorStop(offset, color) {
       this.stops.push([offset, color]);
     },
@@ -91,3 +90,5 @@ CanvasRenderingContext2D.prototype.createConicalGradient = function() {
 
   return obj;
 };
+
+export { ConicalGradient } from './types';
