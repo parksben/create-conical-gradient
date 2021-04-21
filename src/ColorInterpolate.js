@@ -12,10 +12,12 @@ export default class ColorInterpolate {
 
     this.ctx.fillStyle = gradient;
     this.ctx.fillRect(0, 0, segment, 1);
+
+    this.rgbaSet = this.ctx.getImageData(0, 0, segment, 1).data;
   }
 
   getColor(offset) {
-    const imgData = this.ctx.getImageData(offset, 0, 1, 1);
-    return `rgba(${imgData.data.slice(0, 3).join(',')}, ${imgData.data[3] / 255})`;
+    const rgba = this.rgbaSet.slice(4 * offset, 4 * offset + 4);
+    return `rgba(${rgba[0]}, ${rgba[1]}, ${rgba[2]}, ${rgba[3] / 255})`;
   }
 }
