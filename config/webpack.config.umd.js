@@ -4,7 +4,7 @@ const pkg = require('../package.json');
 
 module.exports = Object.assign({}, common, {
   entry: {
-    index: './src/index.js',
+    index: './src/index.ts',
   },
   output: {
     path: path.resolve(__dirname, '../'),
