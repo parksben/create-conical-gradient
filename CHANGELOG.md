@@ -1,4 +1,4 @@
-## [1.0.3](https://github.com/parksben/create-conical-gradient/compare/1.0.2...v1.0.3) (2021-04-21)
+# [1.1.0](https://github.com/parksben/create-conical-gradient/compare/1.0.2...v1.1.0) (2021-04-22)
 
 
 
