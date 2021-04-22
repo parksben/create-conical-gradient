@@ -111,10 +111,11 @@ var ColorInterpolate = /** @class */ (function () {
         }
         this.ctx.fillStyle = gradient;
         this.ctx.fillRect(0, 0, segment, 1);
+        this.rgbaSet = this.ctx.getImageData(0, 0, segment, 1).data;
     }
     ColorInterpolate.prototype.getColor = function (offset) {
-        var imgData = this.ctx.getImageData(offset, 0, 1, 1);
-        return "rgba(" + imgData.data.slice(0, 3).join(',') + ", " + imgData.data[3] / 255 + ")";
+        var rgba = this.rgbaSet.slice(4 * offset, 4 * offset + 4);
+        return "rgba(" + rgba[0] + ", " + rgba[1] + ", " + rgba[2] + ", " + rgba[3] / 255 + ")";
     };
     return ColorInterpolate;
 }());
