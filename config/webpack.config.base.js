@@ -1,6 +1,7 @@
 const path = require('path');
 
-module.exports = {
+/** @type {import('webpack').Configuration} */
+const config = {
   entry: {
     bundle: path.resolve(__dirname, '../src/demo.js'),
   },
@@ -17,7 +18,21 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+      {
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'ts-loader',
+          options: {
+            transpileOnly: true,
+          }
+        },
+      },
     ],
+  },
+  devtool: 'source-map',
+  resolve: {
+    extensions: ['.js', '.ts'],
   },
   devServer: {
     contentBase: path.resolve(__dirname, '../demo'),
@@ -26,3 +41,5 @@ module.exports = {
     hot: true,
   },
 };
+
+module.exports = config;
