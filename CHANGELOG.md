@@ -1,3 +1,12 @@
+## [1.1.2](https://github.com/parksben/create-conical-gradient/compare/1.1.1...1.1.2) (2026-10-05)
+
+
+### Bug Fixes
+
+* stop shadowing the native createConicGradient and render arcs correctly ([452c0bb](https://github.com/parksben/create-conical-gradient/commit/452c0bba26d3dbf4e92e27e783ac0b0623f06f94))
+
+
+
 ## [1.1.1](https://github.com/parksben/create-conical-gradient/compare/1.1.0...1.1.1) (2026-10-05)
 
 
