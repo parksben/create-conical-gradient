@@ -1,7 +1,7 @@
 export interface ConicalGradient {
     addColorStop(pos: number, color: string): void;
     readonly pattern: CanvasPattern;
-    readonly stops: [number, string][];
+    readonly stops: [pos: number, color: string][];
 }
 declare global {
     interface CanvasRenderingContext2D {

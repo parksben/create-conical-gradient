@@ -136,9 +136,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "./src/index.ts");
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index__WEBPACK_IMPORTED_MODULE_0__);
 
-var canvas = document.getElementById('demo-canvas');
-var ctx = canvas.getContext('2d');
-var gradient = ctx.createConicalGradient(240, 135, -Math.PI, Math.PI);
+const canvas = document.getElementById('demo-canvas');
+const ctx = canvas.getContext('2d');
+const gradient = ctx.createConicalGradient(240, 135, -Math.PI, Math.PI);
 gradient.addColorStop(0, '#f00');
 gradient.addColorStop(0.2, '#00f');
 gradient.addColorStop(0.4, '#0ff');
