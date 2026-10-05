@@ -1,6 +1,11 @@
 export interface ConicalGradient {
   addColorStop(pos: number, color: string): void;
-  readonly pattern: CanvasPattern;
+  /**
+   * A `CanvasGradient` when the native `createConicGradient()` is used, or a
+   * `CanvasPattern` when the gradient is rendered by this package. Either value
+   * can be assigned to `CanvasRenderingContext2D.fillStyle` / `strokeStyle`.
+   */
+  readonly pattern: CanvasPattern | CanvasGradient;
   readonly stops: [pos: number, color: string][];
 }
 

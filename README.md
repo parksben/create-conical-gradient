@@ -1,8 +1,10 @@
-# Create Conical Gradeint
+# Create Conical Gradient
 
 > **⚠️ Note:** Modern browsers support conic gradients natively. In **CSS**, use [`conic-gradient()`](https://developer.mozilla.org/en-US/docs/Web/CSS/conic-gradient) (Chrome 69+, Firefox 83+, Safari 12.1+); in **Canvas**, use [`CanvasRenderingContext2D.createConicGradient()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createConicGradient) (Chrome 99+, Firefox 112+, Safari 16.1+).
 >
 > **Please prefer these built-in APIs in new projects.** This package is kept mainly for learning purposes and for legacy browsers without native support.
+>
+> This package does not shadow the native API. On browsers that have `createConicGradient()`, `ctx.createConicalGradient()` delegates a full turn to the native implementation, so you get the native quality and speed; only a partial sweep (an arc), which has no native equivalent, is rendered by the JavaScript simulation in this package.
 
 ![npm](https://img.shields.io/npm/l/create-conical-gradient.svg)
 ![npm](https://img.shields.io/npm/dt/create-conical-gradient.svg)
@@ -29,7 +31,7 @@ CSS has long supported the conical gradients by the property [`conic-gradient`](
 Install the **npm** package for development:
 
 ```bash
-yarn add create-conical-gradient # OR `npm i --save create-conical-gradient`
+yarn add create-conical-gradient # OR `npm i create-conical-gradient`
 ```
 
 Of course, you can also use the **umd** resources for production:
@@ -114,6 +116,12 @@ An optional `Boolean`. If true, draws the gradient counter-clockwise between the
 ```js
 void gradient.addColorStop(offset, color);
 ```
+
+### gradient.pattern
+
+The gradient as a value you can assign to `fillStyle` / `strokeStyle`. It is a native
+`CanvasGradient` when the browser has `createConicGradient()` and the requested sweep is a
+full turn, and a `CanvasPattern` rendered by this package otherwise.
 
 #### Parameters
 
