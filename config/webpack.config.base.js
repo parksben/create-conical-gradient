@@ -35,7 +35,9 @@ const config = {
     extensions: ['.js', '.ts'],
   },
   devServer: {
-    contentBase: path.resolve(__dirname, '../demo'),
+    static: {
+      directory: path.resolve(__dirname, '../demo'),
+    },
     compress: true,
     port: 4000,
     hot: true,
