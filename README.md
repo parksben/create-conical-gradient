@@ -1,5 +1,9 @@
 # Create Conical Gradeint
 
+> **⚠️ Note:** Modern browsers support conic gradients natively. In **CSS**, use [`conic-gradient()`](https://developer.mozilla.org/en-US/docs/Web/CSS/conic-gradient) (Chrome 69+, Firefox 83+, Safari 12.1+); in **Canvas**, use [`CanvasRenderingContext2D.createConicGradient()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createConicGradient) (Chrome 99+, Firefox 112+, Safari 16.1+).
+>
+> **Please prefer these built-in APIs in new projects.** This package is kept mainly for learning purposes and for legacy browsers without native support.
+
 ![npm](https://img.shields.io/npm/l/create-conical-gradient.svg)
 ![npm](https://img.shields.io/npm/dt/create-conical-gradient.svg)
 ![npm](https://img.shields.io/npm/v/create-conical-gradient/latest.svg)
@@ -8,7 +12,7 @@ A pretty extension for [CanvasRenderingContext2D](https://developer.mozilla.org/
 
 ## 🥐 Preface
 
-CSS3 already supports the conical gradients by the property [`conic-gradient`](https://developer.mozilla.org/en-US/docs/Web/CSS/conic-gradient), but unfortunately, [HTML Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) does not yet. One good news to you is that use this package to implement that, by a method similar to [`CanvasRenderingContext2D.createLinearGradient()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createLinearGradient) and [`CanvasRenderingContext2D.createRadialGradient()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createRadialGradient).
+CSS has long supported the conical gradients by the property [`conic-gradient`](https://developer.mozilla.org/en-US/docs/Web/CSS/conic-gradient), and the [HTML Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) has since added its own [`createConicGradient()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createConicGradient). This package implements the same capability by a method similar to [`CanvasRenderingContext2D.createLinearGradient()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createLinearGradient) and [`CanvasRenderingContext2D.createRadialGradient()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createRadialGradient), which makes it handy for legacy browsers or as a reference implementation.
 
 ## 🥪 Demo Online
 
