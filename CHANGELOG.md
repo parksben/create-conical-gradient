@@ -1,3 +1,9 @@
+## [1.1.4](https://github.com/parksben/create-conical-gradient/compare/1.1.3...1.1.4) (2026-10-06)
+
+### Documentation
+
+* point the README demo at the Vite + React sandbox and switch the install command to npm
+
 ## [1.1.3](https://github.com/parksben/create-conical-gradient/compare/1.1.2...1.1.3) (2026-10-05)
 
 
