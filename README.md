@@ -18,20 +18,20 @@ CSS has long supported the conical gradients by the property [`conic-gradient`](
 
 ## 🥪 Demo Online
 
-<a href="https://codesandbox.io/s/create-colorful-house-1o5op?file=/src/App.js" target="_blank">
+<a href="https://codesandbox.io/p/sandbox/create-conical-gradient-ozw8o?file=/src/App.js" target="_blank">
   <img src="https://raw.githubusercontent.com/parksben/create-conical-gradient/master/demo/demo-online.jpg" alt="demo-online">
 </a>
 
-<a href="https://codesandbox.io/s/create-colorful-house-1o5op?file=/src/App.js" target="_blank">
-  <img src="https://codesandbox.io/static/img/play-codesandbox.svg" alt="Edit markdown-navbar-demo-online">
+<a href="https://codesandbox.io/p/sandbox/create-conical-gradient-ozw8o?file=/src/App.js" target="_blank">
+  <img src="https://codesandbox.io/static/img/play-codesandbox.svg" alt="Edit on CodeSandbox">
 </a>
 
 ## 🌮 Install
 
-Install the **npm** package for development:
+Install the **npm** package for development.
 
 ```bash
-yarn add create-conical-gradient # OR `npm i create-conical-gradient`
+npm i create-conical-gradient
 ```
 
 Of course, you can also use the **umd** resources for production:
@@ -73,8 +73,8 @@ Output:
 
 ![quickstart](https://raw.githubusercontent.com/parksben/create-conical-gradient/master/demo/output.png)
 
-<a href="https://codesandbox.io/s/create-conical-gradient-ozw8o?file=/src/App.js" target="_blank">
-  <img src="https://codesandbox.io/static/img/play-codesandbox.svg" alt="Edit markdown-navbar-demo-online">
+<a href="https://codesandbox.io/p/sandbox/create-conical-gradient-ozw8o?file=/src/App.js" target="_blank">
+  <img src="https://codesandbox.io/static/img/play-codesandbox.svg" alt="Edit on CodeSandbox">
 </a>
 
 ## 🍔 Docs
